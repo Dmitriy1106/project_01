@@ -45,8 +45,61 @@ print('Три песни звучат '+str(y))
 # Пункт C.
 # Сгенерируйте случайные песни с помощью модуля random
 # import random
-#print(random)
-# Дополнительно 
+print('Пункт СА')
+from random import sample
+rand_song = sample(my_favorite_songs, 3)
+print(rand_song)
+#print('Пункт СB')
+#from random import sample
+#rand_song = sample(my_favorite_songs_dict,3)
+#print(rand_song)
+# Дополнительно
 # Пункт D.
-# Переведите минуты и секунды в формат времени. Используйте модуль datetime 
+# Переведите минуты и секунды в формат времени. Используйте модуль datetime
+print('Пункт Д из списка А')
+import datetime
+total_time2 = datetime.timedelta()
+time_songs2 = [
+    str(my_favorite_songs[0][1]),
+    str(my_favorite_songs[1][1]),
+    str(my_favorite_songs[2][1]),
+    str(my_favorite_songs[3][1]),
+    str(my_favorite_songs[4][1]),
+    str(my_favorite_songs[5][1]),
+    str(my_favorite_songs[6][1]),
+    str(my_favorite_songs[7][1]),
+    str(my_favorite_songs[8][1])
+]
+for time in time_songs2:
+    minutes, seconds = time.split(".")
+    minutes, seconds = int(minutes), int(seconds)
+    total_time2 += datetime.timedelta(minutes=minutes, seconds=seconds)
+sec1 = total_time2.total_seconds()
+print(str(sec1) +' секунд' )
 
+#print('Пункт Д на основе B')
+#import datetime
+#date = y
+#for time in time_songs2:
+ #   minutes, seconds = time.split(".")
+  #  minutes, seconds = int(minutes), int(seconds)
+   # total_time2 += datetime.timedelta(minutes=minutes, seconds=seconds)
+#print(datetime.datetime.strptime(date, '%M:%S').timestamp())
+#import datetime
+#total_time2 = datetime.timedelta()
+#time_songs2 = str(y)
+#(my_favorite_songs['Waste a Moment']),
+#(my_favorite_songs['New Salvation']),
+#(my_favorite_songs['Staying\' Alive'])
+#'Out of Touch': 3.03,
+#'A Sorta Fairytale': 5.28,
+#'Easy': 4.15,
+#'Beautiful Day': 4.04,
+#'Nowhere to Run': 2.58,
+#'In This World': 4.02,
+#for time in time_songs2:
+  #  minutes, seconds = time.split(".")
+ #   minutes, seconds = int(minutes), int(seconds)
+  #  total_time2 += datetime.timedelta(minutes=minutes, seconds=seconds)
+#sec1 = total_time2.total_seconds()
+#print(str(sec1) +' секунд' )
