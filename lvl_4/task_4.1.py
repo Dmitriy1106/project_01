@@ -62,7 +62,7 @@ def task3():
         cursor = con.cursor()
         cursor.execute("SELECT Students.Student_Id, Students.Student_Name, School.School_Id, School.School_Name"
                        " FROM Students JOIN School ON School.School_Id = Students.School_Id;")
-        version = cursor.fetchone()
+        version = cursor.fetchall()
         print(version)
         close_connection(con)
     except(exeption, sqlite3.error) as error:
